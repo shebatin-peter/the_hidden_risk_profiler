@@ -9,9 +9,13 @@ import QtQuick
 import QtQuick.Controls
 import Interface
 
+property string companyName: "-"
+property string companyIndustry: "-"
+property real companyAssets: '0'
+
 Rectangle {
     id: rectangle
-    width: Constants.width
+    width: 1000
     height: Constants.height
 
     color: Constants.backgroundColor
@@ -25,6 +29,16 @@ Rectangle {
         anchors.horizontalCenterOffset: -619
         anchors.centerIn: parent
         font.family: Constants.font.family
+    }
+
+    Connections {
+        target: CompanyReceiver
+
+        function onAnalysisReady(name, industry, assets) {
+            companyName = name
+            companyIndustry = industry
+            companyAssets = assets
+        }
     }
 
     ListView {
@@ -65,6 +79,36 @@ Rectangle {
             Text {
                 width: 100
                 text: name
+            }
+        }
+    }
+
+    Rectangle {
+        width: parent.width * 0.45
+        height: parent.height
+        color: "#f9f9f9"
+        radius: 6
+        border.color: "#bbb"
+        border.width: 1
+        padding: 20
+
+        Column {
+            anchors.fill: parent
+            spacing: 10
+
+            Text {
+                text: companyName.length > 0 ? "Name: " + companyName : "No company selected"
+                font.pointSize: 14
+            }
+
+            Text {
+                text: "Industry: " + companyIndustry
+                font.pointSize: 14
+            }
+
+            Text {
+                text: "Assets: $" + (companyAssets > 0 ? companyAssets.toFixed(2) : "—")
+                font.pointSize: 14
             }
         }
     }

@@ -3,7 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 
 def get_industry_from_cik(cik):
-    cik_number = cik[3:]
+    cik_number = cik
     url = f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik_number}&owner=exclude&count=40"
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15 (Company info@company.com)'}
@@ -25,7 +25,7 @@ def get_industry_from_cik(cik):
         return {"cik": cik_number, "sic": None, "industry": None, "error": str(e)}
 
 def get_sic_from_cik(cik):
-    cik_number = cik[3:]  # SEC CIKs are padded to 10 digits
+    cik_number = cik # SEC CIKs are padded to 10 digits
     url = f'https://financialmodelingprep.com/stable/sec-filings-company-search/cik?cik={cik_number}&apikey=FIYp2mJD2gLDSh9NBUJWGN7ZRdSMVdqb'
 
     with open('sic_info.json', 'r') as file:
@@ -60,7 +60,7 @@ def get_sic_from_cik(cik):
 
 
 def get_posts(cik):
-    url = 'https://data.sec.gov/api/xbrl/companyfacts/' + cik + '.json'
+    url = 'https://data.sec.gov/api/xbrl/companyfacts/CIK' + cik + '.json'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15'}
 
