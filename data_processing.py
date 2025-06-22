@@ -2,10 +2,6 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-headers = {
-    "User-Agent": "Your Name (your@email.com)"  # replace with your info
-}
-
 def get_industry_from_cik(cik):
     cik_number = cik[3:]
     url = f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik_number}&owner=exclude&count=40"

@@ -1,32 +1,21 @@
-import sys
-import random
-from PySide6 import QtCore, QtWidgets, QtGui
+import sys, os
+from PySide6.QtWidgets import QApplication
+from PySide6.QtQml import QQmlApplicationEngine
+from PySide6.QtCore import QUrl
 
-class MyWidget(QtWidgets.QWidget):
-    def __init__(self):
-        super().__init__()
+app = QApplication(sys.argv)
+engine = QQmlApplicationEngine()
 
-        self.hello = ["Hallo Welt", "Hei maailma", "Hola Mundo", "Привет мир"]
+# 🔧 Tell QML where to look for imports (like Constants.qml if needed)
+project_dir = os.path.dirname(__file__)
+engine.addImportPath(os.path.join(project_dir, "shared", "designer"))
 
-        self.button = QtWidgets.QPushButton("Click me!")
-        self.text = QtWidgets.QLabel("Hello World",
-                                     alignment=QtCore.Qt.AlignCenter)
+# 🔧 Load the actual app window (your QML)
+qml_file = os.path.join(project_dir, "ui", "App.qml")
+engine.load(QUrl.fromLocalFile(qml_file))
 
-        self.layout = QtWidgets.QVBoxLayout(self)
-        self.layout.addWidget(self.text)
-        self.layout.addWidget(self.button)
+# Exit if it failed
+if not engine.rootObjects():
+    sys.exit(-1)
 
-        self.button.clicked.connect(self.magic)
-
-    @QtCore.Slot()
-    def magic(self):
-        self.text.setText(random.choice(self.hello))
-
-if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-
-    widget = MyWidget()
-    widget.resize(1000, 800)
-    widget.show()
-
-    sys.exit(app.exec())
+sys.exit(app.exec())
