@@ -6,7 +6,7 @@ Window {
     height: mainScreen.height
 
     visible: true
-    title: "Interface"
+    title: "The Hidden Risk Profiler"
 
     Screen01 {
         id: mainScreen

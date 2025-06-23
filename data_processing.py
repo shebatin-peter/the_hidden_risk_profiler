@@ -2,6 +2,31 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+# Function of preparing information for future display on the Text Box
+def get_displayable_data(cik, company_name):
+    if cik is not None:
+        posts = get_posts(cik)
+
+        if posts is None:
+            return [company_name, 'No Information', 'No Information']
+        else:
+            company_industry = get_industry_from_cik(cik)['industry']
+            try:
+                company_value_of_assets = str(posts['facts']['us-gaap']['Assets']['units']['USD'][len(posts['facts']['us-gaap']['Assets']['units']['USD']) - 1]['val'])
+                company_value_of_assets = f"{int(company_value_of_assets):,}"
+            except:
+                # sic_info = get_sic_from_cik(company_number) # - Only for cases outside EDGAR database and has a limited amount of calls
+                company_value_of_assets = 'No Information'
+
+            if posts and company_industry is not None:
+                print(f'Name of company - {company_name}\nIndustry - {company_industry}\nValue of assets in USD - {company_value_of_assets}')
+                return [company_name, company_industry, company_value_of_assets]
+            else:
+                return [company_name, 'No Information', 'No Information']
+    else:
+        return None
+
+# Function of getting information about the company (industry, SIC code)
 def get_industry_from_cik(cik, industry_filter = ''):
     cik_number = cik
     url = f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik_number}&owner=exclude&count=40"
@@ -18,15 +43,16 @@ def get_industry_from_cik(cik, industry_filter = ''):
             sic_code = info_block.split("SIC:")[1].split("-")[0].strip()
             sic_name = info_block.split("-")[1].strip().split("State location")[0].split('\n')[0]
             if sic_name == industry_filter:
-                return {"cik": cik_number, "sic": sic_code, "industry": sic_name, 'filter': True}
+                return {"cik": cik_number, "sic": sic_code, "industry": sic_name}
             else:
-                return {"cik": cik_number, "sic": sic_code, "industry": sic_name, 'filter': False}
+                return {"cik": cik_number, "sic": sic_code, "industry": sic_name}
         else:
             return {"cik": cik_number, "sic": None, "industry": None}
 
     except Exception as e:
         return {"cik": cik_number, "sic": None, "industry": None, "error": str(e)}
 
+# Function of getting SIC Code via financial modeling prep - limited usage, for extreme cases only
 def get_sic_from_cik(cik):
     cik_number = cik # SEC CIKs are padded to 10 digits
     url = f'https://financialmodelingprep.com/stable/sec-filings-company-search/cik?cik={cik_number}&apikey=FIYp2mJD2gLDSh9NBUJWGN7ZRdSMVdqb'
@@ -61,7 +87,7 @@ def get_sic_from_cik(cik):
                 json.dump(data, file)
                 return None
 
-
+# Function of getting information about the financial state of the company - base for finance analysis
 def get_posts(cik):
     url = 'https://data.sec.gov/api/xbrl/companyfacts/CIK' + cik + '.json'
     headers = {
@@ -79,21 +105,3 @@ def get_posts(cik):
     except requests.exceptions.RequestException as e:
         print('Error:', e)
         return None
-
-
-def main():
-    cik = 'CIK0000001800'
-    posts = get_posts(cik)
-    posts_ind = get_industry_from_cik(cik)
-    company_name = posts['entityName']
-    company_industry = posts_ind['industry']
-    company_value_of_assets = posts['facts']['us-gaap']['Assets']['units']['USD'][len(posts['facts']['us-gaap']['Assets']['units']['USD']) - 1]['val']
-    #sic_info = get_sic_from_cik(company_number)
-    if posts and company_industry is not None:
-        print(f'Name of company - {company_name}\nIndustry - {company_industry}\nValue of assets in USD - {company_value_of_assets}')
-
-    else:
-        print('Failed to fetch posts from API.')
-
-if __name__ == '__main__':
-    main()

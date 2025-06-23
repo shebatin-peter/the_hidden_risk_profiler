@@ -26,20 +26,20 @@ Rectangle {
     Text {
         width: 377
         height: 80
-        x: 117
-        y: 20
-        text: qsTr("Hello Interface")
-        font.pointSize: 60
+        x: 101
+        y: 17
+        text: qsTr("The Hidden Risk Profiler")
+        font.pointSize: 52
         font.family: Qt.font({family: Qt.application.font.family, pixelSize: Qt.application.font.pixelSize})
     }
 
     Connections {
         target: CompanyReceiver
-        function onAnalysisReady(name, industry, assets) {
-            console.log("🟢 Analysis received:", name, industry, assets)
-            companyName = name
-            companyIndustry = industry
-            companyAssets = assets
+        function onAnalysisReady(displayable_data) {
+            console.log("🟢 Analysis received:", displayable_data[0], displayable_data[1], displayable_data[2])
+            companyName = displayable_data[0]
+            companyIndustry = displayable_data[1]
+            companyAssets = displayable_data[2]
         }
 
         function onFilterChanged(filtered) {
@@ -95,9 +95,9 @@ Rectangle {
     }
 
     Rectangle {
-        width: 300
+        width: 400
         height: 100
-        x: 700
+        x: 675
         y: 120
         color: "#f9f9f9"
         radius: 6
@@ -106,6 +106,7 @@ Rectangle {
 
         Column {
             anchors.fill: parent
+            anchors.margins: 10
             spacing: 10
 
             Text {
