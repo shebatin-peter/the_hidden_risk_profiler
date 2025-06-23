@@ -1,0 +1,1778 @@
+[
+  {
+    "sic_code": "100",
+    "industry": "AGRICULTURAL PRODUCTION-CROPS"
+  },
+  {
+    "sic_code": "200",
+    "industry": "AGRICULTURAL PROD-LIVESTOCK & ANIMAL SPECIALTIES"
+  },
+  {
+    "sic_code": "700",
+    "industry": "AGRICULTURAL SERVICES"
+  },
+  {
+    "sic_code": "800",
+    "industry": "FORESTRY"
+  },
+  {
+    "sic_code": "900",
+    "industry": "FISHING, HUNTING AND TRAPPING"
+  },
+  {
+    "sic_code": "1000",
+    "industry": "METAL MINING"
+  },
+  {
+    "sic_code": "1040",
+    "industry": "GOLD AND SILVER ORES"
+  },
+  {
+    "sic_code": "1090",
+    "industry": "MISCELLANEOUS METAL ORES"
+  },
+  {
+    "sic_code": "1220",
+    "industry": "BITUMINOUS COAL & LIGNITE MINING"
+  },
+  {
+    "sic_code": "1221",
+    "industry": "BITUMINOUS COAL & LIGNITE SURFACE MINING"
+  },
+  {
+    "sic_code": "1311",
+    "industry": "CRUDE PETROLEUM & NATURAL GAS"
+  },
+  {
+    "sic_code": "1381",
+    "industry": "DRILLING OIL & GAS WELLS"
+  },
+  {
+    "sic_code": "1382",
+    "industry": "OIL & GAS FIELD EXPLORATION SERVICES"
+  },
+  {
+    "sic_code": "1389",
+    "industry": "OIL & GAS FIELD SERVICES, NEC"
+  },
+  {
+    "sic_code": "1400",
+    "industry": "MINING & QUARRYING OF NONMETALLIC MINERALS (NO FUELS)"
+  },
+  {
+    "sic_code": "1520",
+    "industry": "GENERAL BLDG CONTRACTORS - RESIDENTIAL BLDGS"
+  },
+  {
+    "sic_code": "1531",
+    "industry": "OPERATIVE BUILDERS"
+  },
+  {
+    "sic_code": "1540",
+    "industry": "GENERAL BLDG CONTRACTORS - NONRESIDENTIAL BLDGS"
+  },
+  {
+    "sic_code": "1600",
+    "industry": "HEAVY CONSTRUCTION OTHER THAN BLDG CONST - CONTRACTORS"
+  },
+  {
+    "sic_code": "1623",
+    "industry": "WATER, SEWER, PIPELINE, COMM & POWER LINE CONSTRUCTION"
+  },
+  {
+    "sic_code": "1700",
+    "industry": "CONSTRUCTION - SPECIAL TRADE CONTRACTORS"
+  },
+  {
+    "sic_code": "1731",
+    "industry": "ELECTRICAL WORK"
+  },
+  {
+    "sic_code": "2000",
+    "industry": "FOOD AND KINDRED PRODUCTS"
+  },
+  {
+    "sic_code": "2011",
+    "industry": "MEAT PACKING PLANTS"
+  },
+  {
+    "sic_code": "2013",
+    "industry": "SAUSAGES & OTHER PREPARED MEAT PRODUCTS"
+  },
+  {
+    "sic_code": "2015",
+    "industry": "POULTRY SLAUGHTERING AND PROCESSING"
+  },
+  {
+    "sic_code": "2020",
+    "industry": "DAIRY PRODUCTS"
+  },
+  {
+    "sic_code": "2024",
+    "industry": "ICE CREAM & FROZEN DESSERTS"
+  },
+  {
+    "sic_code": "2030",
+    "industry": "CANNED, FROZEN & PRESERVD FRUIT, VEG & FOOD SPECIALTIES"
+  },
+  {
+    "sic_code": "2033",
+    "industry": "CANNED, FRUITS, VEG, PRESERVES, JAMS & JELLIES"
+  },
+  {
+    "sic_code": "2040",
+    "industry": "GRAIN MILL PRODUCTS"
+  },
+  {
+    "sic_code": "2050",
+    "industry": "BAKERY PRODUCTS"
+  },
+  {
+    "sic_code": "2052",
+    "industry": "COOKIES & CRACKERS"
+  },
+  {
+    "sic_code": "2060",
+    "industry": "SUGAR & CONFECTIONERY PRODUCTS"
+  },
+  {
+    "sic_code": "2070",
+    "industry": "FATS & OILS"
+  },
+  {
+    "sic_code": "2080",
+    "industry": "BEVERAGES"
+  },
+  {
+    "sic_code": "2082",
+    "industry": "MALT BEVERAGES"
+  },
+  {
+    "sic_code": "2086",
+    "industry": "BOTTLED & CANNED SOFT DRINKS & CARBONATED WATERS"
+  },
+  {
+    "sic_code": "2090",
+    "industry": "MISCELLANEOUS FOOD PREPARATIONS & KINDRED PRODUCTS"
+  },
+  {
+    "sic_code": "2092",
+    "industry": "PREPARED FRESH OR FROZEN FISH & SEAFOODS"
+  },
+  {
+    "sic_code": "2100",
+    "industry": "TOBACCO PRODUCTS"
+  },
+  {
+    "sic_code": "2111",
+    "industry": "CIGARETTES"
+  },
+  {
+    "sic_code": "2200",
+    "industry": "TEXTILE MILL PRODUCTS"
+  },
+  {
+    "sic_code": "2211",
+    "industry": "BROADWOVEN FABRIC MILLS, COTTON"
+  },
+  {
+    "sic_code": "2221",
+    "industry": "BROADWOVEN FABRIC MILLS, MAN MADE FIBER & SILK"
+  },
+  {
+    "sic_code": "2250",
+    "industry": "KNITTING MILLS"
+  },
+  {
+    "sic_code": "2253",
+    "industry": "KNIT OUTERWEAR MILLS"
+  },
+  {
+    "sic_code": "2273",
+    "industry": "CARPETS & RUGS"
+  },
+  {
+    "sic_code": "2300",
+    "industry": "APPAREL & OTHER FINISHD PRODS OF FABRICS & SIMILAR MATL"
+  },
+  {
+    "sic_code": "2320",
+    "industry": "MEN'S & BOYS' FURNISHGS, WORK CLOTHG, & ALLIED GARMENTS"
+  },
+  {
+    "sic_code": "2330",
+    "industry": "WOMEN'S, MISSES', AND JUNIORS OUTERWEAR"
+  },
+  {
+    "sic_code": "2340",
+    "industry": "WOMEN'S, MISSES', CHILDREN'S & INFANTS' UNDERGARMENTS"
+  },
+  {
+    "sic_code": "2390",
+    "industry": "MISCELLANEOUS FABRICATED TEXTILE PRODUCTS"
+  },
+  {
+    "sic_code": "2400",
+    "industry": "LUMBER & WOOD PRODUCTS (NO FURNITURE)"
+  },
+  {
+    "sic_code": "2421",
+    "industry": "SAWMILLS & PLANTING MILLS, GENERAL"
+  },
+  {
+    "sic_code": "2430",
+    "industry": "MILLWOOD, VENEER, PLYWOOD, & STRUCTURAL WOOD MEMBERS"
+  },
+  {
+    "sic_code": "2451",
+    "industry": "MOBILE HOMES"
+  },
+  {
+    "sic_code": "2452",
+    "industry": "PREFABRICATED WOOD BLDGS & COMPONENTS"
+  },
+  {
+    "sic_code": "2510",
+    "industry": "HOUSEHOLD FURNITURE"
+  },
+  {
+    "sic_code": "2511",
+    "industry": "WOOD HOUSEHOLD FURNITURE, (NO UPHOLSTERED)"
+  },
+  {
+    "sic_code": "2520",
+    "industry": "OFFICE FURNITURE"
+  },
+  {
+    "sic_code": "2522",
+    "industry": "OFFICE FURNITURE (NO WOOD)"
+  },
+  {
+    "sic_code": "2531",
+    "industry": "PUBLIC BLDG & RELATED FURNITURE"
+  },
+  {
+    "sic_code": "2540",
+    "industry": "PARTITIONS, SHELVG, LOCKERS, & OFFICE & STORE FIXTURES"
+  },
+  {
+    "sic_code": "2590",
+    "industry": "MISCELLANEOUS FURNITURE & FIXTURES"
+  },
+  {
+    "sic_code": "2600",
+    "industry": "PAPERS & ALLIED PRODUCTS"
+  },
+  {
+    "sic_code": "2611",
+    "industry": "PULP MILLS"
+  },
+  {
+    "sic_code": "2621",
+    "industry": "PAPER MILLS"
+  },
+  {
+    "sic_code": "2631",
+    "industry": "PAPERBOARD MILLS"
+  },
+  {
+    "sic_code": "2650",
+    "industry": "PAPERBOARD CONTAINERS & BOXES"
+  },
+  {
+    "sic_code": "2670",
+    "industry": "CONVERTED PAPER & PAPERBOARD PRODS (NO CONTANERS/BOXES)"
+  },
+  {
+    "sic_code": "2673",
+    "industry": "PLASTICS, FOIL & COATED PAPER BAGS"
+  },
+  {
+    "sic_code": "2711",
+    "industry": "NEWSPAPERS: PUBLISHING OR PUBLISHING & PRINTING"
+  },
+  {
+    "sic_code": "2721",
+    "industry": "PERIODICALS: PUBLISHING OR PUBLISHING & PRINTING"
+  },
+  {
+    "sic_code": "2731",
+    "industry": "BOOKS: PUBLISHING OR PUBLISHING & PRINTING"
+  },
+  {
+    "sic_code": "2732",
+    "industry": "BOOK PRINTING"
+  },
+  {
+    "sic_code": "2741",
+    "industry": "MISCELLANEOUS PUBLISHING"
+  },
+  {
+    "sic_code": "2750",
+    "industry": "COMMERCIAL PRINTING"
+  },
+  {
+    "sic_code": "2761",
+    "industry": "MANIFOLD BUSINESS FORMS"
+  },
+  {
+    "sic_code": "2771",
+    "industry": "GREETING CARDS"
+  },
+  {
+    "sic_code": "2780",
+    "industry": "BLANKBOOKS, LOOSELEAF BINDERS & BOOKBINDG & RELATD WORK"
+  },
+  {
+    "sic_code": "2790",
+    "industry": "SERVICE INDUSTRIES FOR THE PRINTING TRADE"
+  },
+  {
+    "sic_code": "2800",
+    "industry": "CHEMICALS & ALLIED PRODUCTS"
+  },
+  {
+    "sic_code": "2810",
+    "industry": "INDUSTRIAL INORGANIC CHEMICALS"
+  },
+  {
+    "sic_code": "2820",
+    "industry": "PLASTIC MATERIAL, SYNTH RESIN/RUBBER, CELLULOS (NO GLASS)"
+  },
+  {
+    "sic_code": "2821",
+    "industry": "PLASTIC MATERIALS, SYNTH RESINS & NONVULCAN ELASTOMERS"
+  },
+  {
+    "sic_code": "2833",
+    "industry": "MEDICINAL CHEMICALS & BOTANICAL PRODUCTS"
+  },
+  {
+    "sic_code": "2834",
+    "industry": "PHARMACEUTICAL PREPARATIONS"
+  },
+  {
+    "sic_code": "2835",
+    "industry": "IN VITRO & IN VIVO DIAGNOSTIC SUBSTANCES"
+  },
+  {
+    "sic_code": "2836",
+    "industry": "BIOLOGICAL PRODUCTS, (NO DISGNOSTIC SUBSTANCES)"
+  },
+  {
+    "sic_code": "2840",
+    "industry": "SOAP, DETERGENTS, CLEANG PREPARATIONS, PERFUMES, COSMETICS"
+  },
+  {
+    "sic_code": "2842",
+    "industry": "SPECIALTY CLEANING, POLISHING AND SANITATION PREPARATIONS"
+  },
+  {
+    "sic_code": "2844",
+    "industry": "PERFUMES, COSMETICS & OTHER TOILET PREPARATIONS"
+  },
+  {
+    "sic_code": "2851",
+    "industry": "PAINTS, VARNISHES, LACQUERS, ENAMELS & ALLIED PRODS"
+  },
+  {
+    "sic_code": "2860",
+    "industry": "INDUSTRIAL ORGANIC CHEMICALS"
+  },
+  {
+    "sic_code": "2870",
+    "industry": "AGRICULTURAL CHEMICALS"
+  },
+  {
+    "sic_code": "2890",
+    "industry": "MISCELLANEOUS CHEMICAL PRODUCTS"
+  },
+  {
+    "sic_code": "2891",
+    "industry": "ADHESIVES & SEALANTS"
+  },
+  {
+    "sic_code": "2911",
+    "industry": "PETROLEUM REFINING"
+  },
+  {
+    "sic_code": "2950",
+    "industry": "ASPHALT PAVING & ROOFING MATERIALS"
+  },
+  {
+    "sic_code": "2990",
+    "industry": "MISCELLANEOUS PRODUCTS OF PETROLEUM & COAL"
+  },
+  {
+    "sic_code": "3011",
+    "industry": "TIRES & INNER TUBES"
+  },
+  {
+    "sic_code": "3021",
+    "industry": "RUBBER & PLASTICS FOOTWEAR"
+  },
+  {
+    "sic_code": "3050",
+    "industry": "GASKETS, PACKG & SEALG DEVICES & RUBBER & PLASTICS HOSE"
+  },
+  {
+    "sic_code": "3060",
+    "industry": "FABRICATED RUBBER PRODUCTS, NEC"
+  },
+  {
+    "sic_code": "3080",
+    "industry": "MISCELLANEOUS PLASTICS PRODUCTS"
+  },
+  {
+    "sic_code": "3081",
+    "industry": "UNSUPPORTED PLASTICS FILM & SHEET"
+  },
+  {
+    "sic_code": "3086",
+    "industry": "PLASTICS FOAM PRODUCTS"
+  },
+  {
+    "sic_code": "3089",
+    "industry": "PLASTICS PRODUCTS, NEC"
+  },
+  {
+    "sic_code": "3100",
+    "industry": "LEATHER & LEATHER PRODUCTS"
+  },
+  {
+    "sic_code": "3140",
+    "industry": "FOOTWEAR, (NO RUBBER)"
+  },
+  {
+    "sic_code": "3211",
+    "industry": "FLAT GLASS"
+  },
+  {
+    "sic_code": "3220",
+    "industry": "GLASS & GLASSWARE, PRESSED OR BLOWN"
+  },
+  {
+    "sic_code": "3221",
+    "industry": "GLASS CONTAINERS"
+  },
+  {
+    "sic_code": "3231",
+    "industry": "GLASS PRODUCTS, MADE OF PURCHASED GLASS"
+  },
+  {
+    "sic_code": "3241",
+    "industry": "CEMENT, HYDRAULIC"
+  },
+  {
+    "sic_code": "3250",
+    "industry": "STRUCTURAL CLAY PRODUCTS"
+  },
+  {
+    "sic_code": "3260",
+    "industry": "POTTERY & RELATED PRODUCTS"
+  },
+  {
+    "sic_code": "3270",
+    "industry": "CONCRETE, GYPSUM & PLASTER PRODUCTS"
+  },
+  {
+    "sic_code": "3272",
+    "industry": "CONCRETE PRODUCTS, EXCEPT BLOCK & BRICK"
+  },
+  {
+    "sic_code": "3281",
+    "industry": "CUT STONE & STONE PRODUCTS"
+  },
+  {
+    "sic_code": "3290",
+    "industry": "ABRASIVE, ASBESTOS & MISC NONMETALLIC MINERAL PRODS"
+  },
+  {
+    "sic_code": "3310",
+    "industry": "STEEL WORKS, BLAST FURNACES & ROLLING & FINISHING MILLS"
+  },
+  {
+    "sic_code": "3312",
+    "industry": "STEEL WORKS, BLAST FURNACES & ROLLING MILLS (COKE OVENS)"
+  },
+  {
+    "sic_code": "3317",
+    "industry": "STEEL PIPE & TUBES"
+  },
+  {
+    "sic_code": "3320",
+    "industry": "IRON & STEEL FOUNDRIES"
+  },
+  {
+    "sic_code": "3330",
+    "industry": "PRIMARY SMELTING & REFINING OF NONFERROUS METALS"
+  },
+  {
+    "sic_code": "3334",
+    "industry": "PRIMARY PRODUCTION OF ALUMINUM"
+  },
+  {
+    "sic_code": "3341",
+    "industry": "SECONDARY SMELTING & REFINING OF NONFERROUS METALS"
+  },
+  {
+    "sic_code": "3350",
+    "industry": "ROLLING DRAWING & EXTRUDING OF NONFERROUS METALS"
+  },
+  {
+    "sic_code": "3357",
+    "industry": "DRAWING & INSULATING OF NONFERROUS WIRE"
+  },
+  {
+    "sic_code": "3360",
+    "industry": "NONFERROUS FOUNDRIES (CASTINGS)"
+  },
+  {
+    "sic_code": "3390",
+    "industry": "MISCELLANEOUS PRIMARY METAL PRODUCTS"
+  },
+  {
+    "sic_code": "3411",
+    "industry": "METAL CANS"
+  },
+  {
+    "sic_code": "3412",
+    "industry": "METAL SHIPPING BARRELS, DRUMS, KEGS & PAILS"
+  },
+  {
+    "sic_code": "3420",
+    "industry": "CUTLERY, HANDTOOLS & GENERAL HARDWARE"
+  },
+  {
+    "sic_code": "3430",
+    "industry": "HEATING EQUIP, EXCEPT ELEC & WARM AIR; & PLUMBING FIXTURES"
+  },
+  {
+    "sic_code": "3433",
+    "industry": "HEATING EQUIPMENT, EXCEPT ELECTRIC & WARM AIR FURNACES"
+  },
+  {
+    "sic_code": "3440",
+    "industry": "FABRICATED STRUCTURAL METAL PRODUCTS"
+  },
+  {
+    "sic_code": "3442",
+    "industry": "METAL DOORS, SASH, FRAMES, MOLDINGS & TRIM"
+  },
+  {
+    "sic_code": "3443",
+    "industry": "FABRICATED PLATE WORK (BOILER SHOPS)"
+  },
+  {
+    "sic_code": "3444",
+    "industry": "SHEET METAL WORK"
+  },
+  {
+    "sic_code": "3448",
+    "industry": "PREFABRICATED METAL BUILDINGS & COMPONENTS"
+  },
+  {
+    "sic_code": "3451",
+    "industry": "SCREW MACHINE PRODUCTS"
+  },
+  {
+    "sic_code": "3452",
+    "industry": "BOLTS, NUTS, SCREWS, RIVETS & WASHERS"
+  },
+  {
+    "sic_code": "3460",
+    "industry": "METAL FORGINGS & STAMPINGS"
+  },
+  {
+    "sic_code": "3470",
+    "industry": "COATING, ENGRAVING & ALLIED SERVICES"
+  },
+  {
+    "sic_code": "3480",
+    "industry": "ORDNANCE & ACCESSORIES, (NO VEHICLES/GUIDED MISSILES)"
+  },
+  {
+    "sic_code": "3490",
+    "industry": "MISCELLANEOUS FABRICATED METAL PRODUCTS"
+  },
+  {
+    "sic_code": "3510",
+    "industry": "ENGINES & TURBINES"
+  },
+  {
+    "sic_code": "3523",
+    "industry": "FARM MACHINERY & EQUIPMENT"
+  },
+  {
+    "sic_code": "3524",
+    "industry": "LAWN & GARDEN TRACTORS & HOME LAWN & GARDENS EQUIP"
+  },
+  {
+    "sic_code": "3530",
+    "industry": "CONSTRUCTION, MINING & MATERIALS HANDLING MACHINERY & EQUIP"
+  },
+  {
+    "sic_code": "3531",
+    "industry": "CONSTRUCTION MACHINERY & EQUIP"
+  },
+  {
+    "sic_code": "3532",
+    "industry": "MINING MACHINERY & EQUIP (NO OIL & GAS FIELD MACH & EQUIP)"
+  },
+  {
+    "sic_code": "3533",
+    "industry": "OIL & GAS FIELD MACHINERY & EQUIPMENT"
+  },
+  {
+    "sic_code": "3537",
+    "industry": "INDUSTRIAL TRUCKS, TRACTORS, TRAILORS & STACKERS"
+  },
+  {
+    "sic_code": "3540",
+    "industry": "METALWORKG MACHINERY & EQUIPMENT"
+  },
+  {
+    "sic_code": "3541",
+    "industry": "MACHINE TOOLS, METAL CUTTING TYPES"
+  },
+  {
+    "sic_code": "3550",
+    "industry": "SPECIAL INDUSTRY MACHINERY (NO METALWORKING MACHINERY)"
+  },
+  {
+    "sic_code": "3555",
+    "industry": "PRINTING TRADES MACHINERY & EQUIPMENT"
+  },
+  {
+    "sic_code": "3559",
+    "industry": "SPECIAL INDUSTRY MACHINERY, NEC"
+  },
+  {
+    "sic_code": "3560",
+    "industry": "GENERAL INDUSTRIAL MACHINERY & EQUIPMENT"
+  },
+  {
+    "sic_code": "3561",
+    "industry": "PUMPS & PUMPING EQUIPMENT"
+  },
+  {
+    "sic_code": "3562",
+    "industry": "BALL & ROLLER BEARINGS"
+  },
+  {
+    "sic_code": "3564",
+    "industry": "INDUSTRIAL & COMMERCIAL FANS & BLOWERS & AIR PURIFING EQUIP"
+  },
+  {
+    "sic_code": "3567",
+    "industry": "INDUSTRIAL PROCESS FURNACES & OVENS"
+  },
+  {
+    "sic_code": "3569",
+    "industry": "GENERAL INDUSTRIAL MACHINERY & EQUIPMENT, NEC"
+  },
+  {
+    "sic_code": "3570",
+    "industry": "COMPUTER & OFFICE EQUIPMENT"
+  },
+  {
+    "sic_code": "3571",
+    "industry": "ELECTRONIC COMPUTERS"
+  },
+  {
+    "sic_code": "3572",
+    "industry": "COMPUTER STORAGE DEVICES"
+  },
+  {
+    "sic_code": "3575",
+    "industry": "COMPUTER TERMINALS"
+  },
+  {
+    "sic_code": "3576",
+    "industry": "COMPUTER COMMUNICATIONS EQUIPMENT"
+  },
+  {
+    "sic_code": "3577",
+    "industry": "COMPUTER PERIPHERAL EQUIPMENT, NEC"
+  },
+  {
+    "sic_code": "3578",
+    "industry": "CALCULATING & ACCOUNTING MACHINES (NO ELECTRONIC COMPUTERS)"
+  },
+  {
+    "sic_code": "3579",
+    "industry": "OFFICE MACHINES, NEC"
+  },
+  {
+    "sic_code": "3580",
+    "industry": "REFRIGERATION & SERVICE INDUSTRY MACHINERY"
+  },
+  {
+    "sic_code": "3585",
+    "industry": "AIR-COND & WARM AIR HEATG EQUIP & COMM & INDL REFRIG EQUIP"
+  },
+  {
+    "sic_code": "3590",
+    "industry": "MISC INDUSTRIAL & COMMERCIAL MACHINERY & EQUIPMENT"
+  },
+  {
+    "sic_code": "3600",
+    "industry": "ELECTRONIC & OTHER ELECTRICAL EQUIPMENT (NO COMPUTER EQUIP)"
+  },
+  {
+    "sic_code": "3612",
+    "industry": "POWER, DISTRIBUTION & SPECIALTY TRANSFORMERS"
+  },
+  {
+    "sic_code": "3613",
+    "industry": "SWITCHGEAR & SWITCHBOARD APPARATUS"
+  },
+  {
+    "sic_code": "3620",
+    "industry": "ELECTRICAL INDUSTRIAL APPARATUS"
+  },
+  {
+    "sic_code": "3621",
+    "industry": "MOTORS & GENERATORS"
+  },
+  {
+    "sic_code": "3630",
+    "industry": "HOUSEHOLD APPLIANCES"
+  },
+  {
+    "sic_code": "3634",
+    "industry": "ELECTRIC HOUSEWARES & FANS"
+  },
+  {
+    "sic_code": "3640",
+    "industry": "ELECTRIC LIGHTING & WIRING EQUIPMENT"
+  },
+  {
+    "sic_code": "3651",
+    "industry": "HOUSEHOLD AUDIO & VIDEO EQUIPMENT"
+  },
+  {
+    "sic_code": "3652",
+    "industry": "PHONOGRAPH RECORDS & PRERECORDED AUDIO TAPES & DISKS"
+  },
+  {
+    "sic_code": "3661",
+    "industry": "TELEPHONE & TELEGRAPH APPARATUS"
+  },
+  {
+    "sic_code": "3663",
+    "industry": "RADIO & TV BROADCASTING & COMMUNICATIONS EQUIPMENT"
+  },
+  {
+    "sic_code": "3669",
+    "industry": "COMMUNICATIONS EQUIPMENT, NEC"
+  },
+  {
+    "sic_code": "3670",
+    "industry": "ELECTRONIC COMPONENTS & ACCESSORIES"
+  },
+  {
+    "sic_code": "3672",
+    "industry": "PRINTED CIRCUIT BOARDS"
+  },
+  {
+    "sic_code": "3674",
+    "industry": "SEMICONDUCTORS & RELATED DEVICES"
+  },
+  {
+    "sic_code": "3677",
+    "industry": "ELECTRONIC COILS, TRANSFORMERS & OTHER INDUCTORS"
+  },
+  {
+    "sic_code": "3678",
+    "industry": "ELECTRONIC CONNECTORS"
+  },
+  {
+    "sic_code": "3679",
+    "industry": "ELECTRONIC COMPONENTS, NEC"
+  },
+  {
+    "sic_code": "3690",
+    "industry": "MISCELLANEOUS ELECTRICAL MACHINERY, EQUIPMENT & SUPPLIES"
+  },
+  {
+    "sic_code": "3695",
+    "industry": "MAGNETIC & OPTICAL RECORDING MEDIA"
+  },
+  {
+    "sic_code": "3711",
+    "industry": "MOTOR VEHICLES & PASSENGER CAR BODIES"
+  },
+  {
+    "sic_code": "3713",
+    "industry": "TRUCK & BUS BODIES"
+  },
+  {
+    "sic_code": "3714",
+    "industry": "MOTOR VEHICLE PARTS & ACCESSORIES"
+  },
+  {
+    "sic_code": "3715",
+    "industry": "TRUCK TRAILERS"
+  },
+  {
+    "sic_code": "3716",
+    "industry": "MOTOR HOMES"
+  },
+  {
+    "sic_code": "3720",
+    "industry": "AIRCRAFT & PARTS"
+  },
+  {
+    "sic_code": "3721",
+    "industry": "AIRCRAFT"
+  },
+  {
+    "sic_code": "3724",
+    "industry": "AIRCRAFT ENGINES & ENGINE PARTS"
+  },
+  {
+    "sic_code": "3728",
+    "industry": "AIRCRAFT PARTS & AUXILIARY EQUIPMENT, NEC"
+  },
+  {
+    "sic_code": "3730",
+    "industry": "SHIP & BOAT BUILDING & REPAIRING"
+  },
+  {
+    "sic_code": "3743",
+    "industry": "RAILROAD EQUIPMENT"
+  },
+  {
+    "sic_code": "3751",
+    "industry": "MOTORCYCLES, BICYCLES & PARTS"
+  },
+  {
+    "sic_code": "3760",
+    "industry": "GUIDED MISSILES & SPACE VEHICLES & PARTS"
+  },
+  {
+    "sic_code": "3790",
+    "industry": "MISCELLANEOUS TRANSPORTATION EQUIPMENT"
+  },
+  {
+    "sic_code": "3812",
+    "industry": "SEARCH, DETECTION, NAVAGATION, GUIDANCE, AERONAUTICAL SYS"
+  },
+  {
+    "sic_code": "3821",
+    "industry": "LABORATORY APPARATUS & FURNITURE"
+  },
+  {
+    "sic_code": "3822",
+    "industry": "AUTO CONTROLS FOR REGULATING RESIDENTIAL & COMML ENVIRONMENTS"
+  },
+  {
+    "sic_code": "3823",
+    "industry": "INDUSTRIAL INSTRUMENTS FOR MEASUREMENT, DISPLAY, AND CONTROL"
+  },
+  {
+    "sic_code": "3824",
+    "industry": "TOTALIZING FLUID METERS & COUNTING DEVICES"
+  },
+  {
+    "sic_code": "3825",
+    "industry": "INSTRUMENTS FOR MEAS & TESTING OF ELECTRICITY & ELEC SIGNALS"
+  },
+  {
+    "sic_code": "3826",
+    "industry": "LABORATORY ANALYTICAL INSTRUMENTS"
+  },
+  {
+    "sic_code": "3827",
+    "industry": "OPTICAL INSTRUMENTS & LENSES"
+  },
+  {
+    "sic_code": "3829",
+    "industry": "MEASURING & CONTROLLING DEVICES, NEC"
+  },
+  {
+    "sic_code": "3841",
+    "industry": "SURGICAL & MEDICAL INSTRUMENTS & APPARATUS"
+  },
+  {
+    "sic_code": "3842",
+    "industry": "ORTHOPEDIC, PROSTHETIC & SURGICAL APPLIANCES & SUPPLIES"
+  },
+  {
+    "sic_code": "3843",
+    "industry": "DENTAL EQUIPMENT & SUPPLIES"
+  },
+  {
+    "sic_code": "3844",
+    "industry": "X-RAY APPARATUS & TUBES & RELATED IRRADIATION APPARATUS"
+  },
+  {
+    "sic_code": "3845",
+    "industry": "ELECTROMEDICAL & ELECTROTHERAPEUTIC APPARATUS"
+  },
+  {
+    "sic_code": "3851",
+    "industry": "OPHTHALMIC GOODS"
+  },
+  {
+    "sic_code": "3861",
+    "industry": "PHOTOGRAPHIC EQUIPMENT & SUPPLIES"
+  },
+  {
+    "sic_code": "3873",
+    "industry": "WATCHES, CLOCKS, CLOCKWORK OPERATED DEVICES/PARTS"
+  },
+  {
+    "sic_code": "3910",
+    "industry": "JEWELRY, SILVERWARE & PLATED WARE"
+  },
+  {
+    "sic_code": "3911",
+    "industry": "JEWELRY, PRECIOUS METAL"
+  },
+  {
+    "sic_code": "3931",
+    "industry": "MUSICAL INSTRUMENTS"
+  },
+  {
+    "sic_code": "3942",
+    "industry": "DOLLS & STUFFED TOYS"
+  },
+  {
+    "sic_code": "3944",
+    "industry": "GAMES, TOYS & CHILDREN'S VEHICLES (NO DOLLS & BICYCLES)"
+  },
+  {
+    "sic_code": "3949",
+    "industry": "SPORTING & ATHLETIC GOODS, NEC"
+  },
+  {
+    "sic_code": "3950",
+    "industry": "PENS, PENCILS & OTHER ARTISTS' MATERIALS"
+  },
+  {
+    "sic_code": "3960",
+    "industry": "COSTUME JEWELRY & NOVELTIES"
+  },
+  {
+    "sic_code": "3990",
+    "industry": "MISCELLANEOUS MANUFACTURING INDUSTRIES"
+  },
+  {
+    "sic_code": "4011",
+    "industry": "RAILROADS, LINE-HAUL OPERATING"
+  },
+  {
+    "sic_code": "4013",
+    "industry": "RAILROAD SWITCHING & TERMINAL ESTABLISHMENTS"
+  },
+  {
+    "sic_code": "4100",
+    "industry": "LOCAL & SUBURBAN TRANSIT & INTERURBAN HWY PASSENGER TRANS"
+  },
+  {
+    "sic_code": "4210",
+    "industry": "TRUCKING & COURIER SERVICES (NO AIR)"
+  },
+  {
+    "sic_code": "4213",
+    "industry": "TRUCKING (NO LOCAL)"
+  },
+  {
+    "sic_code": "4220",
+    "industry": "PUBLIC WAREHOUSING & STORAGE"
+  },
+  {
+    "sic_code": "4231",
+    "industry": "TERMINAL MAINTENANCE FACILITIES FOR MOTOR FREIGHT TRANSPORT"
+  },
+  {
+    "sic_code": "4400",
+    "industry": "WATER TRANSPORTATION"
+  },
+  {
+    "sic_code": "4412",
+    "industry": "DEEP SEA FOREIGN TRANSPORTATION OF FREIGHT"
+  },
+  {
+    "sic_code": "4512",
+    "industry": "AIR TRANSPORTATION, SCHEDULED"
+  },
+  {
+    "sic_code": "4513",
+    "industry": "AIR COURIER SERVICES"
+  },
+  {
+    "sic_code": "4522",
+    "industry": "AIR TRANSPORTATION, NONSCHEDULED"
+  },
+  {
+    "sic_code": "4581",
+    "industry": "AIRPORTS, FLYING FIELDS & AIRPORT TERMINAL SERVICES"
+  },
+  {
+    "sic_code": "4610",
+    "industry": "PIPE LINES (NO NATURAL GAS)"
+  },
+  {
+    "sic_code": "4700",
+    "industry": "TRANSPORTATION SERVICES"
+  },
+  {
+    "sic_code": "4731",
+    "industry": "ARRANGEMENT OF TRANSPORTATION OF FREIGHT & CARGO"
+  },
+  {
+    "sic_code": "4812",
+    "industry": "RADIOTELEPHONE COMMUNICATIONS"
+  },
+  {
+    "sic_code": "4813",
+    "industry": "TELEPHONE COMMUNICATIONS (NO RADIOTELEPHONE)"
+  },
+  {
+    "sic_code": "4822",
+    "industry": "TELEGRAPH & OTHER MESSAGE COMMUNICATIONS"
+  },
+  {
+    "sic_code": "4832",
+    "industry": "RADIO BROADCASTING STATIONS"
+  },
+  {
+    "sic_code": "4833",
+    "industry": "TELEVISION BROADCASTING STATIONS"
+  },
+  {
+    "sic_code": "4841",
+    "industry": "CABLE & OTHER PAY TELEVISION SERVICES"
+  },
+  {
+    "sic_code": "4899",
+    "industry": "COMMUNICATIONS SERVICES, NEC"
+  },
+  {
+    "sic_code": "4900",
+    "industry": "ELECTRIC, GAS & SANITARY SERVICES"
+  },
+  {
+    "sic_code": "4911",
+    "industry": "ELECTRIC SERVICES"
+  },
+  {
+    "sic_code": "4922",
+    "industry": "NATURAL GAS TRANSMISSION"
+  },
+  {
+    "sic_code": "4923",
+    "industry": "NATURAL GAS TRANSMISISON & DISTRIBUTION"
+  },
+  {
+    "sic_code": "4924",
+    "industry": "NATURAL GAS DISTRIBUTION"
+  },
+  {
+    "sic_code": "4931",
+    "industry": "ELECTRIC & OTHER SERVICES COMBINED"
+  },
+  {
+    "sic_code": "4932",
+    "industry": "GAS & OTHER SERVICES COMBINED"
+  },
+  {
+    "sic_code": "4941",
+    "industry": "WATER SUPPLY"
+  },
+  {
+    "sic_code": "4950",
+    "industry": "SANITARY SERVICES"
+  },
+  {
+    "sic_code": "4953",
+    "industry": "REFUSE SYSTEMS"
+  },
+  {
+    "sic_code": "4955",
+    "industry": "HAZARDOUS WASTE MANAGEMENT"
+  },
+  {
+    "sic_code": "4961",
+    "industry": "STEAM & AIR-CONDITIONING SUPPLY"
+  },
+  {
+    "sic_code": "4991",
+    "industry": "COGENERATION SERVICES & SMALL POWER PRODUCERS"
+  },
+  {
+    "sic_code": "5000",
+    "industry": "WHOLESALE-DURABLE GOODS"
+  },
+  {
+    "sic_code": "5010",
+    "industry": "WHOLESALE-MOTOR VEHICLES & MOTOR VEHICLE PARTS & SUPPLIES"
+  },
+  {
+    "sic_code": "5013",
+    "industry": "WHOLESALE-MOTOR VEHICLE SUPPLIES & NEW PARTS"
+  },
+  {
+    "sic_code": "5020",
+    "industry": "WHOLESALE-FURNITURE & HOME FURNISHINGS"
+  },
+  {
+    "sic_code": "5030",
+    "industry": "WHOLESALE-LUMBER & OTHER CONSTRUCTION MATERIALS"
+  },
+  {
+    "sic_code": "5031",
+    "industry": "WHOLESALE-LUMBER, PLYWOOD, MILLWORK & WOOD PANELS"
+  },
+  {
+    "sic_code": "5040",
+    "industry": "WHOLESALE-PROFESSIONAL & COMMERCIAL EQUIPMENT & SUPPLIES"
+  },
+  {
+    "sic_code": "5045",
+    "industry": "WHOLESALE-COMPUTERS & PERIPHERAL EQUIPMENT & SOFTWARE"
+  },
+  {
+    "sic_code": "5047",
+    "industry": "WHOLESALE-MEDICAL, DENTAL & HOSPITAL EQUIPMENT & SUPPLIES"
+  },
+  {
+    "sic_code": "5050",
+    "industry": "WHOLESALE-METALS & MINERALS (NO PETROLEUM)"
+  },
+  {
+    "sic_code": "5051",
+    "industry": "WHOLESALE-METALS SERVICE CENTERS & OFFICES"
+  },
+  {
+    "sic_code": "5063",
+    "industry": "WHOLESALE-ELECTRICAL APPARATUS & EQUIPMENT, WIRING SUPPLIES"
+  },
+  {
+    "sic_code": "5064",
+    "industry": "WHOLESALE-ELECTRICAL APPLIANCES, TV & RADIO SETS"
+  },
+  {
+    "sic_code": "5065",
+    "industry": "WHOLESALE-ELECTRONIC PARTS & EQUIPMENT, NEC"
+  },
+  {
+    "sic_code": "5070",
+    "industry": "WHOLESALE-HARDWARE & PLUMBING & HEATING EQUIPMENT & SUPPLIES"
+  },
+  {
+    "sic_code": "5072",
+    "industry": "WHOLESALE-HARDWARE"
+  },
+  {
+    "sic_code": "5080",
+    "industry": "WHOLESALE-MACHINERY, EQUIPMENT & SUPPLIES"
+  },
+  {
+    "sic_code": "5082",
+    "industry": "WHOLESALE-CONSTRUCTION & MINING (NO PETRO) MACHINERY & EQUIP"
+  },
+  {
+    "sic_code": "5084",
+    "industry": "WHOLESALE-INDUSTRIAL MACHINERY & EQUIPMENT"
+  },
+  {
+    "sic_code": "5090",
+    "industry": "WHOLESALE-MISC DURABLE GOODS"
+  },
+  {
+    "sic_code": "5094",
+    "industry": "WHOLESALE-JEWELRY, WATCHES, PRECIOUS STONES & METALS"
+  },
+  {
+    "sic_code": "5099",
+    "industry": "WHOLESALE-DURABLE GOODS, NEC"
+  },
+  {
+    "sic_code": "5110",
+    "industry": "WHOLESALE-PAPER & PAPER PRODUCTS"
+  },
+  {
+    "sic_code": "5122",
+    "industry": "WHOLESALE-DRUGS, PROPRIETARIES & DRUGGISTS' SUNDRIES"
+  },
+  {
+    "sic_code": "5130",
+    "industry": "WHOLESALE-APPAREL, PIECE GOODS & NOTIONS"
+  },
+  {
+    "sic_code": "5140",
+    "industry": "WHOLESALE-GROCERIES & RELATED PRODUCTS"
+  },
+  {
+    "sic_code": "5141",
+    "industry": "WHOLESALE-GROCERIES, GENERAL LINE"
+  },
+  {
+    "sic_code": "5150",
+    "industry": "WHOLESALE-FARM PRODUCT RAW MATERIALS"
+  },
+  {
+    "sic_code": "5160",
+    "industry": "WHOLESALE-CHEMICALS & ALLIED PRODUCTS"
+  },
+  {
+    "sic_code": "5171",
+    "industry": "WHOLESALE-PETROLEUM BULK STATIONS & TERMINALS"
+  },
+  {
+    "sic_code": "5172",
+    "industry": "WHOLESALE-PETROLEUM & PETROLEUM PRODUCTS (NO BULK STATIONS)"
+  },
+  {
+    "sic_code": "5180",
+    "industry": "WHOLESALE-BEER, WINE & DISTILLED ALCOHOLIC BEVERAGES"
+  },
+  {
+    "sic_code": "5190",
+    "industry": "WHOLESALE-MISCELLANEOUS NONDURABLE GOODS"
+  },
+  {
+    "sic_code": "5200",
+    "industry": "RETAIL-BUILDING MATERIALS, HARDWARE, GARDEN SUPPLY"
+  },
+  {
+    "sic_code": "5211",
+    "industry": "RETAIL-LUMBER & OTHER BUILDING MATERIALS DEALERS"
+  },
+  {
+    "sic_code": "5271",
+    "industry": "RETAIL-MOBILE HOME DEALERS"
+  },
+  {
+    "sic_code": "5311",
+    "industry": "RETAIL-DEPARTMENT STORES"
+  },
+  {
+    "sic_code": "5331",
+    "industry": "RETAIL-VARIETY STORES"
+  },
+  {
+    "sic_code": "5399",
+    "industry": "RETAIL-MISC GENERAL MERCHANDISE STORES"
+  },
+  {
+    "sic_code": "5400",
+    "industry": "RETAIL-FOOD STORES"
+  },
+  {
+    "sic_code": "5411",
+    "industry": "RETAIL-GROCERY STORES"
+  },
+  {
+    "sic_code": "5412",
+    "industry": "RETAIL-CONVENIENCE STORES"
+  },
+  {
+    "sic_code": "5500",
+    "industry": "RETAIL-AUTO DEALERS & GASOLINE STATIONS"
+  },
+  {
+    "sic_code": "5531",
+    "industry": "RETAIL-AUTO & HOME SUPPLY STORES"
+  },
+  {
+    "sic_code": "5600",
+    "industry": "RETAIL-APPAREL & ACCESSORY STORES"
+  },
+  {
+    "sic_code": "5621",
+    "industry": "RETAIL-WOMEN'S CLOTHING STORES"
+  },
+  {
+    "sic_code": "5651",
+    "industry": "RETAIL-FAMILY CLOTHING STORES"
+  },
+  {
+    "sic_code": "5661",
+    "industry": "RETAIL-SHOE STORES"
+  },
+  {
+    "sic_code": "5700",
+    "industry": "RETAIL-HOME FURNITURE, FURNISHINGS & EQUIPMENT STORES"
+  },
+  {
+    "sic_code": "5712",
+    "industry": "RETAIL-FURNITURE STORES"
+  },
+  {
+    "sic_code": "5731",
+    "industry": "RETAIL-RADIO, TV & CONSUMER ELECTRONICS STORES"
+  },
+  {
+    "sic_code": "5734",
+    "industry": "RETAIL-COMPUTER & COMPUTER SOFTWARE STORES"
+  },
+  {
+    "sic_code": "5735",
+    "industry": "RETAIL-RECORD & PRERECORDED TAPE STORES"
+  },
+  {
+    "sic_code": "5810",
+    "industry": "RETAIL-EATING & DRINKING PLACES"
+  },
+  {
+    "sic_code": "5812",
+    "industry": "RETAIL-EATING PLACES"
+  },
+  {
+    "sic_code": "5900",
+    "industry": "RETAIL-MISCELLANEOUS RETAIL"
+  },
+  {
+    "sic_code": "5912",
+    "industry": "RETAIL-DRUG STORES AND PROPRIETARY STORES"
+  },
+  {
+    "sic_code": "5940",
+    "industry": "RETAIL-MISCELLANEOUS SHOPPING GOODS STORES"
+  },
+  {
+    "sic_code": "5944",
+    "industry": "RETAIL-JEWELRY STORES"
+  },
+  {
+    "sic_code": "5945",
+    "industry": "RETAIL-HOBBY, TOY & GAME SHOPS"
+  },
+  {
+    "sic_code": "5960",
+    "industry": "RETAIL-NONSTORE RETAILERS"
+  },
+  {
+    "sic_code": "5961",
+    "industry": "RETAIL-CATALOG & MAIL-ORDER HOUSES"
+  },
+  {
+    "sic_code": "5990",
+    "industry": "RETAIL-RETAIL STORES, NEC"
+  },
+  {
+    "sic_code": "6021",
+    "industry": "NATIONAL COMMERCIAL BANKS"
+  },
+  {
+    "sic_code": "6022",
+    "industry": "STATE COMMERCIAL BANKS"
+  },
+  {
+    "sic_code": "6029",
+    "industry": "COMMERCIAL BANKS, NEC"
+  },
+  {
+    "sic_code": "6035",
+    "industry": "SAVINGS INSTITUTION, FEDERALLY CHARTERED"
+  },
+  {
+    "sic_code": "6036",
+    "industry": "SAVINGS INSTITUTIONS, NOT FEDERALLY CHARTERED"
+  },
+  {
+    "sic_code": "6099",
+    "industry": "FUNCTIONS RELATED TO DEPOSITORY BANKING, NEC"
+  },
+  {
+    "sic_code": "6111",
+    "industry": "FEDERAL & FEDERALLY-SPONSORED CREDIT AGENCIES"
+  },
+  {
+    "sic_code": "6141",
+    "industry": "PERSONAL CREDIT INSTITUTIONS"
+  },
+  {
+    "sic_code": "6153",
+    "industry": "SHORT-TERM BUSINESS CREDIT INSTITUTIONS"
+  },
+  {
+    "sic_code": "6159",
+    "industry": "MISCELLANEOUS BUSINESS CREDIT INSTITUTION"
+  },
+  {
+    "sic_code": "6162",
+    "industry": "MORTGAGE BANKERS & LOAN CORRESPONDENTS"
+  },
+  {
+    "sic_code": "6163",
+    "industry": "LOAN BROKERS"
+  },
+  {
+    "sic_code": "6172",
+    "industry": "FINANCE LESSORS"
+  },
+  {
+    "sic_code": "6189",
+    "industry": "ASSET-BACKED SECURITIES"
+  },
+  {
+    "sic_code": "6199",
+    "industry": "FINANCE SERVICES"
+  },
+  {
+    "sic_code": "6200",
+    "industry": "SECURITY & COMMODITY BROKERS, DEALERS, EXCHANGES & SERVICES"
+  },
+  {
+    "sic_code": "6211",
+    "industry": "SECURITY BROKERS, DEALERS & FLOTATION COMPANIES"
+  },
+  {
+    "sic_code": "6221",
+    "industry": "COMMODITY CONTRACTS BROKERS & DEALERS"
+  },
+  {
+    "sic_code": "6282",
+    "industry": "INVESTMENT ADVICE"
+  },
+  {
+    "sic_code": "6311",
+    "industry": "LIFE INSURANCE"
+  },
+  {
+    "sic_code": "6321",
+    "industry": "ACCIDENT & HEALTH INSURANCE"
+  },
+  {
+    "sic_code": "6324",
+    "industry": "HOSPITAL & MEDICAL SERVICE PLANS"
+  },
+  {
+    "sic_code": "6331",
+    "industry": "FIRE, MARINE & CASUALTY INSURANCE"
+  },
+  {
+    "sic_code": "6351",
+    "industry": "SURETY INSURANCE"
+  },
+  {
+    "sic_code": "6361",
+    "industry": "TITLE INSURANCE"
+  },
+  {
+    "sic_code": "6399",
+    "industry": "INSURANCE CARRIERS, NEC"
+  },
+  {
+    "sic_code": "6411",
+    "industry": "INSURANCE AGENTS, BROKERS & SERVICE"
+  },
+  {
+    "sic_code": "6500",
+    "industry": "REAL ESTATE"
+  },
+  {
+    "sic_code": "6510",
+    "industry": "REAL ESTATE OPERATORS (NO DEVELOPERS) & LESSORS"
+  },
+  {
+    "sic_code": "6512",
+    "industry": "OPERATORS OF NONRESIDENTIAL BUILDINGS"
+  },
+  {
+    "sic_code": "6513",
+    "industry": "OPERATORS OF APARTMENT BUILDINGS"
+  },
+  {
+    "sic_code": "6519",
+    "industry": "LESSORS OF REAL PROPERTY, NEC"
+  },
+  {
+    "sic_code": "6531",
+    "industry": "REAL ESTATE AGENTS & MANAGERS (FOR OTHERS)"
+  },
+  {
+    "sic_code": "6532",
+    "industry": "REAL ESTATE DEALERS (FOR THEIR OWN ACCOUNT)"
+  },
+  {
+    "sic_code": "6552",
+    "industry": "LAND SUBDIVIDERS & DEVELOPERS (NO CEMETERIES)"
+  },
+  {
+    "sic_code": "6770",
+    "industry": "BLANK CHECKS"
+  },
+  {
+    "sic_code": "6792",
+    "industry": "OIL ROYALTY TRADERS"
+  },
+  {
+    "sic_code": "6794",
+    "industry": "PATENT OWNERS & LESSORS"
+  },
+  {
+    "sic_code": "6795",
+    "industry": "MINERAL ROYALTY TRADERS"
+  },
+  {
+    "sic_code": "6798",
+    "industry": "REAL ESTATE INVESTMENT TRUSTS"
+  },
+  {
+    "sic_code": "6799",
+    "industry": "INVESTORS, NEC"
+  },
+  {
+    "sic_code": "7000",
+    "industry": "HOTELS, ROOMING HOUSES, CAMPS & OTHER LODGING PLACES"
+  },
+  {
+    "sic_code": "7011",
+    "industry": "HOTELS & MOTELS"
+  },
+  {
+    "sic_code": "7200",
+    "industry": "SERVICES-PERSONAL SERVICES"
+  },
+  {
+    "sic_code": "7310",
+    "industry": "SERVICES-ADVERTISING"
+  },
+  {
+    "sic_code": "7311",
+    "industry": "SERVICES-ADVERTISING AGENCIES"
+  },
+  {
+    "sic_code": "7320",
+    "industry": "SERVICES-CONSUMER CREDIT REPORTING, COLLECTION AGENCIES"
+  },
+  {
+    "sic_code": "7330",
+    "industry": "SERVICES-MAILING, REPRODUCTION, COMMERCIAL ART & PHOTOGRAPHY"
+  },
+  {
+    "sic_code": "7331",
+    "industry": "SERVICES-DIRECT MAIL ADVERTISING SERVICES"
+  },
+  {
+    "sic_code": "7340",
+    "industry": "SERVICES-TO DWELLINGS & OTHER BUILDINGS"
+  },
+  {
+    "sic_code": "7350",
+    "industry": "SERVICES-MISCELLANEOUS EQUIPMENT RENTAL & LEASING"
+  },
+  {
+    "sic_code": "7359",
+    "industry": "SERVICES-EQUIPMENT RENTAL & LEASING, NEC"
+  },
+  {
+    "sic_code": "7361",
+    "industry": "SERVICES-EMPLOYMENT AGENCIES"
+  },
+  {
+    "sic_code": "7363",
+    "industry": "SERVICES-HELP SUPPLY SERVICES"
+  },
+  {
+    "sic_code": "7370",
+    "industry": "SERVICES-COMPUTER PROGRAMMING, DATA PROCESSING, ETC."
+  },
+  {
+    "sic_code": "7371",
+    "industry": "SERVICES-COMPUTER PROGRAMMING SERVICES"
+  },
+  {
+    "sic_code": "7372",
+    "industry": "SERVICES-PREPACKAGED SOFTWARE"
+  },
+  {
+    "sic_code": "7373",
+    "industry": "SERVICES-COMPUTER INTEGRATED SYSTEMS DESIGN"
+  },
+  {
+    "sic_code": "7374",
+    "industry": "SERVICES-COMPUTER PROCESSING & DATA PREPARATION"
+  },
+  {
+    "sic_code": "7377",
+    "industry": "SERVICES-COMPUTER RENTAL & LEASING"
+  },
+  {
+    "sic_code": "7380",
+    "industry": "SERVICES-MISCELLANEOUS BUSINESS SERVICES"
+  },
+  {
+    "sic_code": "7381",
+    "industry": "SERVICES-DETECTIVE, GUARD & ARMORED CAR SERVICES"
+  },
+  {
+    "sic_code": "7384",
+    "industry": "SERVICES-PHOTOFINISHING LABORATORIES"
+  },
+  {
+    "sic_code": "7385",
+    "industry": "SERVICES-TELEPHONE INTERCONNECT SYSTEMS"
+  },
+  {
+    "sic_code": "7389",
+    "industry": "SERVICES-BUSINESS SERVICES, NEC"
+  },
+  {
+    "sic_code": "7500",
+    "industry": "SERVICES-AUTOMOTIVE REPAIR, SERVICES & PARKING"
+  },
+  {
+    "sic_code": "7510",
+    "industry": "SERVICES-AUTO RENTAL & LEASING (NO DRIVERS)"
+  },
+  {
+    "sic_code": "7600",
+    "industry": "SERVICES-MISCELLANEOUS REPAIR SERVICES"
+  },
+  {
+    "sic_code": "7812",
+    "industry": "SERVICES-MOTION PICTURE & VIDEO TAPE PRODUCTION"
+  },
+  {
+    "sic_code": "7819",
+    "industry": "SERVICES-ALLIED TO MOTION PICTURE PRODUCTION"
+  },
+  {
+    "sic_code": "7822",
+    "industry": "SERVICES-MOTION PICTURE & VIDEO TAPE DISTRIBUTION"
+  },
+  {
+    "sic_code": "7829",
+    "industry": "SERVICES-ALLIED TO MOTION PICTURE DISTRIBUTION"
+  },
+  {
+    "sic_code": "7830",
+    "industry": "SERVICES-MOTION PICTURE THEATERS"
+  },
+  {
+    "sic_code": "7841",
+    "industry": "SERVICES-VIDEO TAPE RENTAL"
+  },
+  {
+    "sic_code": "7900",
+    "industry": "SERVICES-AMUSEMENT & RECREATION SERVICES"
+  },
+  {
+    "sic_code": "7948",
+    "industry": "SERVICES-RACING, INCLUDING TRACK OPERATION"
+  },
+  {
+    "sic_code": "7990",
+    "industry": "SERVICES-MISCELLANEOUS AMUSEMENT & RECREATION"
+  },
+  {
+    "sic_code": "7997",
+    "industry": "SERVICES-MEMBERSHIP SPORTS & RECREATION CLUBS"
+  },
+  {
+    "sic_code": "8000",
+    "industry": "SERVICES-HEALTH SERVICES"
+  },
+  {
+    "sic_code": "8011",
+    "industry": "SERVICES-OFFICES & CLINICS OF DOCTORS OF MEDICINE"
+  },
+  {
+    "sic_code": "8050",
+    "industry": "SERVICES-NURSING & PERSONAL CARE FACILITIES"
+  },
+  {
+    "sic_code": "8051",
+    "industry": "SERVICES-SKILLED NURSING CARE FACILITIES"
+  },
+  {
+    "sic_code": "8060",
+    "industry": "SERVICES-HOSPITALS"
+  },
+  {
+    "sic_code": "8062",
+    "industry": "SERVICES-GENERAL MEDICAL & SURGICAL HOSPITALS, NEC"
+  },
+  {
+    "sic_code": "8071",
+    "industry": "SERVICES-MEDICAL LABORATORIES"
+  },
+  {
+    "sic_code": "8082",
+    "industry": "SERVICES-HOME HEALTH CARE SERVICES"
+  },
+  {
+    "sic_code": "8090",
+    "industry": "SERVICES-MISC HEALTH & ALLIED SERVICES, NEC"
+  },
+  {
+    "sic_code": "8093",
+    "industry": "SERVICES-SPECIALTY OUTPATIENT FACILITIES, NEC"
+  },
+  {
+    "sic_code": "8111",
+    "industry": "SERVICES-LEGAL SERVICES"
+  },
+  {
+    "sic_code": "8200",
+    "industry": "SERVICES-EDUCATIONAL SERVICES"
+  },
+  {
+    "sic_code": "8300",
+    "industry": "SERVICES-SOCIAL SERVICES"
+  },
+  {
+    "sic_code": "8351",
+    "industry": "SERVICES-CHILD DAY CARE SERVICES"
+  },
+  {
+    "sic_code": "8600",
+    "industry": "SERVICES-MEMBERSHIP ORGANIZATIONS"
+  },
+  {
+    "sic_code": "8700",
+    "industry": "SERVICES-ENGINEERING, ACCOUNTING, RESEARCH, MANAGEMENT"
+  },
+  {
+    "sic_code": "8711",
+    "industry": "SERVICES-ENGINEERING SERVICES"
+  },
+  {
+    "sic_code": "8731",
+    "industry": "SERVICES-COMMERCIAL PHYSICAL & BIOLOGICAL RESEARCH"
+  },
+  {
+    "sic_code": "8734",
+    "industry": "SERVICES-TESTING LABORATORIES"
+  },
+  {
+    "sic_code": "8741",
+    "industry": "SERVICES-MANAGEMENT SERVICES"
+  },
+  {
+    "sic_code": "8742",
+    "industry": "SERVICES-MANAGEMENT CONSULTING SERVICES"
+  },
+  {
+    "sic_code": "8744",
+    "industry": "SERVICES-FACILITIES SUPPORT MANAGEMENT SERVICES"
+  },
+  {
+    "sic_code": "8880",
+    "industry": "AMERICAN DEPOSITARY RECEIPTS"
+  },
+  {
+    "sic_code": "8888",
+    "industry": "FOREIGN GOVERNMENTS"
+  },
+  {
+    "sic_code": "8900",
+    "industry": "SERVICES-SERVICES, NEC"
+  },
+  {
+    "sic_code": "9721",
+    "industry": "INTERNATIONAL AFFAIRS"
+  },
+  {
+    "sic_code": "9995",
+    "industry": "NON-OPERATING ESTABLISHMENTS"
+  }
+]

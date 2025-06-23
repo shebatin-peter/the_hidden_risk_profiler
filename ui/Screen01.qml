@@ -19,6 +19,7 @@ Rectangle {
     property string companyName: "-"
     property string companyIndustry: "-"
     property string companyAssets: "-"
+    property var cikModel: []
 
     property var selectedCik: null
 
@@ -34,21 +35,25 @@ Rectangle {
 
     Connections {
         target: CompanyReceiver
-
         function onAnalysisReady(name, industry, assets) {
             console.log("🟢 Analysis received:", name, industry, assets)
             companyName = name
             companyIndustry = industry
             companyAssets = assets
         }
+
+        function onFilterChanged(filtered) {
+            console.log('Filtered list received: ', filtered.lenght)
+            cikModel = filtered
+        }
     }
 
      ListView {
-        id: listView
+        id: companyList
         x: 117
         y: 121
         width: 448
-        height: 918
+        height: 525
         spacing: 8
         model: cikModel
 
@@ -81,7 +86,7 @@ Rectangle {
             MouseArea {
                 anchors.fill: parent
                 onClicked: {
-                    listView.currentIndex = index
+                    companyList.currentIndex = index
                     selectedCik = modelData
                     CompanyReceiver.handleSelection(modelData)
                 }
@@ -117,6 +122,67 @@ Rectangle {
                 text: companyAssets.length > 0 ? "Value of assets in USD: " + companyAssets : "Value of assets in USD: -"
                 font.pointSize: 14
             }
+        }
+    }
+
+    ListView {
+        id: sicList
+        x: 650
+        y: 250
+        width: parent.width * 0.4
+        height: 450
+        model: sicModel
+        spacing: 6
+        clip: true
+
+        delegate: Rectangle {
+            width: parent.width
+            height: 40
+            color: ListView.isCurrentItem ? "#cceeff" : "#ffffff"
+            border.color: "#bbb"
+            border.width: 1
+            radius: 4
+
+            Row {
+                anchors.centerIn: parent
+                spacing: 10
+
+                Text { text: modelData.sic_code; font.bold: true }
+                Text { text: modelData.industry; font.pointSize: 12 }
+            }
+
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    sicList.currentIndex = index
+                    console.log("Selected SIC:", modelData.sic_code)
+                    CompanyReceiver.filterCompaniesBySIC(modelData.sic_code)
+                }
+            }
+        }
+    }
+
+    Button {
+        text: 'Reset Filter'
+        onClicked: CompanyReceiver.resetFilter()
+        width: 150
+        height: 40
+        x: 775
+        y: 60
+
+        background: Rectangle {
+            color: 'white'
+            border.color: 'black'
+            border.width: 1
+            radius: 4
+        }
+
+        contentItem: Text {
+            text: qsTr('Reset Filter')
+            color: 'black'
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
         }
     }
 

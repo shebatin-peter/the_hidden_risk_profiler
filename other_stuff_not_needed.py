@@ -7,3 +7,6 @@ try:
 except:
     print('No such file')
 '''
+
+# Better to check on SIC {6021, 6022, 6331, 6029}
+# SIC only few to show {3674, 2834}

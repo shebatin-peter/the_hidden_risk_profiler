@@ -2,7 +2,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-def get_industry_from_cik(cik):
+def get_industry_from_cik(cik, industry_filter = ''):
     cik_number = cik
     url = f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik_number}&owner=exclude&count=40"
     headers = {
@@ -17,7 +17,10 @@ def get_industry_from_cik(cik):
         if "SIC:" in info_block:
             sic_code = info_block.split("SIC:")[1].split("-")[0].strip()
             sic_name = info_block.split("-")[1].strip().split("State location")[0].split('\n')[0]
-            return {"cik": cik_number, "sic": sic_code, "industry": sic_name}
+            if sic_name == industry_filter:
+                return {"cik": cik_number, "sic": sic_code, "industry": sic_name, 'filter': True}
+            else:
+                return {"cik": cik_number, "sic": sic_code, "industry": sic_name, 'filter': False}
         else:
             return {"cik": cik_number, "sic": None, "industry": None}
 
