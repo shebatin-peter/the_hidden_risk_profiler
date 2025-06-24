@@ -21,16 +21,22 @@ Rectangle {
     property string companyAssets: "-"
     property string companyFScore: "-"
     property string companyFScoreSign: ""
+    property string companySynergy: "-"
+    property string companySynergySign: ""
     property var cikModel: []
 
     property var selectedCik: null
 
+    Component.onCompleted: {
+        CompanyReceiver.resetFilter()
+    }
+
     Text {
         width: 377
         height: 80
-        x: 101
+        x: 90
         y: 17
-        text: qsTr("The Hidden Risk Profiler")
+        text: qsTr("Choose Target Company")
         font.pointSize: 52
         font.family: Qt.font({family: Qt.application.font.family, pixelSize: Qt.application.font.pixelSize})
     }
@@ -55,7 +61,7 @@ Rectangle {
      ListView {
         id: companyList
         x: 117
-        y: 115
+        y: 120
         width: 448
         height: 525
         spacing: 8
@@ -129,7 +135,7 @@ Rectangle {
             }
 
             Text {
-                text: companyAssets.length > 0 ? companyFScoreSign + "F-score: " + companyFScore : "F-score: -"
+                text: companyAssets.length > 0 ? companyFScoreSign + "F-score: " + companyFScore + "                    " + companySynergySign + "Synergy Scoring: " + companySynergy: "F-score: -                  Synergy Scoring: -"
                 font.pointSize: 14
             }
         }
@@ -177,7 +183,7 @@ Rectangle {
         onClicked: CompanyReceiver.resetFilter()
         width: 150
         height: 40
-        x: 775
+        x: 665
         y: 55
 
         background: Rectangle {
@@ -196,10 +202,34 @@ Rectangle {
         }
     }
 
+    Button {
+        text: 'Return to the Acquirer Info page'
+        onClicked: appStack.replace('StartScreen.qml')
+        width: 250
+        height: 40
+        x: 850
+        y: 55
+
+        background: Rectangle {
+            color: 'white'
+            border.color: 'black'
+            border.width: 1
+            radius: 4
+        }
+
+        contentItem: Text {
+            text: qsTr('Return to the Acquirer Info page')
+            color: 'black'
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+        }
+    }
+
     Text {
-        anchors.bottom: parent.bottom
+        anchors.top: parent.top
         anchors.horizontalCenter: parent.horizontalCenter
-        text: selectedCik ? "Selected: " + selectedCik.name + " (" + selectedCik.cik + ")" : "No company selected"
+        text: 'Acquirer SIC code: ' + CompanyReceiver.get_acquirer_sic_code() + "   Acquirer's Total Assets number: " + CompanyReceiver.get_acquirer_assets()
         font.pointSize: 12
         color: "blue"
         padding: 10

@@ -9,6 +9,8 @@ class CompanyReceiver(QObject):
 
         def __init__(self, cik_list):
             super().__init__()
+            self.acquirer_sic_code = None
+            self.acquirer_assets = None
             self.cik_list = cik_list
             self.selected_company = None
             self.full_company_list = cik_list
@@ -58,3 +60,20 @@ class CompanyReceiver(QObject):
         def resetFilter(self):
             print('Reset filter button was pressed!')
             self.filterChanged.emit(self.full_company_list)
+
+        @Slot(str, str)
+        def setAcquirerInfo(self, assets, sic_code):
+            try:
+                self.acquirer_assets = int(assets)
+            except ValueError:
+                self.acquirer_assets = None
+            self.acquirer_sic_code = sic_code
+            print("Saved acquirer info:", self.acquirer_assets, self.acquirer_sic_code)
+
+        @Slot(result = str)
+        def get_acquirer_assets(self):
+            return str(self.acquirer_assets)
+
+        @Slot(result = str)
+        def get_acquirer_sic_code(self):
+            return self.acquirer_sic_code

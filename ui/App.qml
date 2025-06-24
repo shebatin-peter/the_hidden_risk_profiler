@@ -1,16 +1,17 @@
 import QtQuick
+import QtQuick.Controls
 
 
 Window {
-    width: mainScreen.width
-    height: mainScreen.height
-
+    width: 1200
+    height: 700
     visible: true
     title: "The Hidden Risk Profiler"
 
-    Screen01 {
-        id: mainScreen
+    StackView {
+        id: appStack
+        anchors.fill: parent
+        initialItem: StartScreen {}
     }
-
 }
 
