@@ -19,6 +19,8 @@ Rectangle {
     property string companyName: "-"
     property string companyIndustry: "-"
     property string companyAssets: "-"
+    property string companyFScore: "-"
+    property string companyFScoreSign: ""
     property var cikModel: []
 
     property var selectedCik: null
@@ -36,10 +38,12 @@ Rectangle {
     Connections {
         target: CompanyReceiver
         function onAnalysisReady(displayable_data) {
-            console.log("🟢 Analysis received:", displayable_data[0], displayable_data[1], displayable_data[2])
+            console.log("🟢 Analysis received:", displayable_data[0], displayable_data[1], displayable_data[2], displayable_data[3], displayable_data[4])
             companyName = displayable_data[0]
             companyIndustry = displayable_data[1]
             companyAssets = displayable_data[2]
+            companyFScore = displayable_data[3]
+            companyFScoreSign = displayable_data[4]
         }
 
         function onFilterChanged(filtered) {
@@ -51,7 +55,7 @@ Rectangle {
      ListView {
         id: companyList
         x: 117
-        y: 121
+        y: 115
         width: 448
         height: 525
         spacing: 8
@@ -96,9 +100,9 @@ Rectangle {
 
     Rectangle {
         width: 400
-        height: 100
+        height: 125
         x: 675
-        y: 120
+        y: 115
         color: "#f9f9f9"
         radius: 6
         border.color: "#bbb"
@@ -121,6 +125,11 @@ Rectangle {
 
             Text {
                 text: companyAssets.length > 0 ? "Value of assets in USD: " + companyAssets : "Value of assets in USD: -"
+                font.pointSize: 14
+            }
+
+            Text {
+                text: companyAssets.length > 0 ? companyFScoreSign + "F-score: " + companyFScore : "F-score: -"
                 font.pointSize: 14
             }
         }
@@ -169,7 +178,7 @@ Rectangle {
         width: 150
         height: 40
         x: 775
-        y: 60
+        y: 55
 
         background: Rectangle {
             color: 'white'

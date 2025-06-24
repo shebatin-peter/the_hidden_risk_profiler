@@ -2,13 +2,216 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
+# Function of conducting an Altman Z-score for the chosen company
+def conduct_piotroski_scoring(cik):
+    if cik is not None:
+        posts = get_posts(cik)
+        if posts is None:
+            return None
+        else:
+            # 1, 2 Profitability check: ROA > 0 and ROA increased
+            successful_tests = 0
+            points = 0
+            try:
+                # ROA calculation this year
+                total_assets = posts['facts']['us-gaap']['Assets']['units']['USD']; total_assets = total_assets[len(total_assets)-1]['val']
+                current_year = posts['facts']['us-gaap']['Assets']['units']['USD'][-1]['fy']
+                try:
+                    EBIT = posts['facts']['us-gaap']['OperatingIncomeLoss']['units']['USD']; EBIT = EBIT[len(EBIT)-1]['val']
+                except:
+                    EBIT = posts['facts']['us-gaap']['NetIncomeLoss']['units']['USD']; EBIT = EBIT[len(EBIT) - 1]['val']
+                ROA_current_year = EBIT / total_assets
+                successful_tests += 1
+                if ROA_current_year > 0:
+                    points += 1
+
+                # ROA calculation last year
+                total_assets = posts['facts']['us-gaap']['Assets']['units']['USD'];
+                l = 1
+                while(total_assets[len(total_assets) - l]['fy'] == current_year):
+                    l += 1
+                total_assets = total_assets[len(total_assets) - l]['val']
+                try:
+                    EBIT = posts['facts']['us-gaap']['OperatingIncomeLoss']['units']['USD'];
+                    EBIT = EBIT[len(EBIT) - l]['val']
+                except:
+                    EBIT = posts['facts']['us-gaap']['NetIncomeLoss']['units']['USD'];
+                    EBIT = EBIT[len(EBIT) - l]['val']
+                ROA_last_year = EBIT / total_assets
+                successful_tests += 1
+                if ROA_current_year > ROA_last_year:
+                    points += 1
+            except:
+                pass
+
+            # 3, 4 Profitability Check: CFO > 0 and CFO > Net Income
+            try:
+                try:
+                    NetCashFlows = posts['facts']['us-gaap']['NetCashProvidedByUsedInOperatingActivitiesContinuingOperations']['units']['USD']; NetCashFlows = NetCashFlows[len(NetCashFlows)-1]['val']
+                except:
+                    NetCashFlows = posts['facts']['us-gaap']['NetCashProvidedByUsedInOperatingActivities']['units']['USD']; NetCashFlows = NetCashFlows[len(NetCashFlows)-1]['val']
+                successful_tests += 1
+                if NetCashFlows > 0:
+                    points += 1
+
+                try:
+                    Net_Income = posts['facts']['us-gaap']['NetIncomeLoss']['units']['USD']; Net_Income = Net_Income[len(Net_Income)-1]['val']
+                except:
+                    Net_Income = posts['facts']['us-gaap']['ProfitLoss']['units']['USD']; Net_Income = Net_Income[len(Net_Income) - 1]['val']
+                successful_tests += 1
+                if Net_Income > Net_Income:
+                    points += 1
+            except:
+                pass
+
+            # 5 Leverage, Liquidity & Source of Funds check: Lower Leverage
+            try:
+                total_assets_current = posts['facts']['us-gaap']['Assets']['units']['USD']; total_assets = total_assets[len(total_assets) - 1]['val']
+                current_year = posts['facts']['us-gaap']['Assets']['units']['USD'][-1]['fy']
+                total_assets_previous = posts['facts']['us-gaap']['Assets']['units']['USD'];
+                l = 1
+                while (total_assets_previous[len(total_assets_previous) - l]['fy'] == current_year):
+                    l += 1
+                total_assets_previous = total_assets_previous[len(total_assets_previous) - l]['val']
+
+                try:
+                    leverage_current = posts['facts']['us-gaap']['LongTermDebtNoncurrent']['units']['USD']; leverage_current = leverage_current[len(leverage_current) - 1]['val'] / total_assets_current
+                    leverage_previous = posts['facts']['us-gaap']['LongTermDebtNoncurrent']['units']['USD'];
+                    l = 1
+                    while (leverage_previous[len(leverage_previous) - l]['fy'] == current_year):
+                        l += 1
+                    leverage_previous = leverage_previous[len(leverage_previous) - l]['val'] / total_assets_current
+                except:
+                    leverage_current = posts['facts']['us-gaap']['LongTermDebt']['units']['USD']; leverage_current = leverage_current[len(leverage_current) - 1]['val'] / total_assets_current
+                    leverage_previous = posts['facts']['us-gaap']['LongTermDebt']['units']['USD'];
+                    l = 1
+                    while (leverage_previous[len(leverage_previous) - l]['fy'] == current_year):
+                        l += 1
+                    leverage_previous = leverage_previous[len(leverage_previous) - l]['val'] / total_assets_current
+                successful_tests += 1
+                if leverage_current < leverage_previous:
+                    points += 1
+            except:
+                pass
+
+            # 6 Leverage, Liquidity & Source of Funds check: Lower Leverage
+            try:
+                current_assets_now = posts['facts']['us-gaap']['AssetsCurrent']['units']['USD']; current_assets_now = current_assets_now[len(current_assets_now) - 1]['val']
+                current_liabilities_now = posts['facts']['us-gaap']['LiabilitiesCurrent']['units']['USD']; current_liabilities_now = current_liabilities_now[len(current_liabilities_now) - 1]['val']
+                current_year = posts['facts']['us-gaap']['AssetsCurrent']['units']['USD'][-1]['fy']
+                current_assets_previous = posts['facts']['us-gaap']['AssetsCurrent']['units']['USD'];
+                l = 1
+                while (current_assets_previous[len(current_assets_previous) - l]['fy'] == current_year):
+                    l += 1
+                current_assets_previous = current_assets_previous[len(current_assets_previous) - l]['val']
+                current_liabilities_previous = posts['facts']['us-gaap']['LiabilitiesCurrent']['units']['USD'];
+                l = 1
+                while (current_liabilities_previous[len(current_liabilities_previous) - l]['fy'] == current_year):
+                    l += 1
+                current_liabilities_previous = current_liabilities_previous[len(current_liabilities_previous) - l]['val']
+                current_ratio_now = current_assets_now / current_liabilities_now
+                current_ratio_previous = current_assets_previous / current_liabilities_previous
+                successful_tests += 1
+                if current_ratio_now > current_ratio_previous:
+                    points += 1
+            except:
+                pass
+
+            # 7 Leverage, Liquidity & Source of Funds check: No new Equity
+            try:
+                shares_outstanding_current = posts['facts']['dei']['EntityCommonStockSharesOutstanding']['units']['shares']; shares_outstanding_current = shares_outstanding_current[len(shares_outstanding_current) - 1]['val']
+                current_year = posts['facts']['us-gaap']['EntityCommonStockSharesOutstanding']['units']['USD'][-1]['fy']
+                shares_outstanding_previous = posts['facts']['us-gaap']['EntityCommonStockSharesOutstanding']['units']['USD'];
+                l = 1
+                while (shares_outstanding_previous[len(shares_outstanding_previous) - l]['fy'] == current_year):
+                    l += 1
+                shares_outstanding_previous = shares_outstanding_previous[len(shares_outstanding_previous) - l]['val']
+                successful_tests += 1
+                if shares_outstanding_current <= shares_outstanding_previous:
+                    points += 1
+            except:
+                pass
+
+            # 8 Operating Efficiency check: Gross Margin improvement
+            try:
+                gross_profit_current = posts['facts']['dei']['GrossProfit']['units']['shares']; gross_profit_current = gross_profit_current[len(gross_profit_current) - 1]['val']
+                current_year = posts['facts']['us-gaap']['GrossProfit']['units']['USD'][-1]['fy']
+                gross_profit_previous = posts['facts']['us-gaap']['GrossProfit']['units']['USD'];
+                l = 1
+                while (gross_profit_previous[len(gross_profit_previous) - l]['fy'] == current_year):
+                    l += 1
+                gross_profit_previous = gross_profit_previous[len(gross_profit_previous) - l]['val']
+
+                try:
+                    revenues_current = posts['facts']['dei']['SalesRevenueNet']['units']['shares']; revenues_current = revenues_current[len(revenues_current) - 1]['val']
+                    revenues_previous = posts['facts']['us-gaap']['SalesRevenueNet']['units']['USD'];
+                    l = 1
+                    while (revenues_previous[len(revenues_previous) - l]['fy'] == current_year):
+                        l += 1
+                    revenues_previous = revenues_previous[len(revenues_previous) - l]['val']
+                except:
+                    revenues_current = posts['facts']['dei']['Revenues']['units']['shares']; revenues_current = revenues_current[len(revenues_current) - 1]['val']
+                    revenues_previous = posts['facts']['us-gaap']['Revenues']['units']['USD'];
+                    l = 1
+                    while (revenues_previous[len(revenues_previous) - l]['fy'] == current_year):
+                        l += 1
+                    revenues_previous = revenues_previous[len(revenues_previous) - l]['val']
+                margin_current = gross_profit_current / revenues_current
+                margin_previous = gross_profit_previous / revenues_previous
+                successful_tests += 1
+                if margin_current > margin_previous:
+                    points += 1
+            except:
+                pass
+
+            # 9 Operating Efficiency check: Asset Turnover improvement
+            try:
+                assets_current = posts['facts']['us-gaap']['Assets']['units']['USD']; assets_current = assets_current[len(assets_current) - 1]['val']
+                current_year = posts['facts']['us-gaap']['AssetsCurrent']['units']['USD'][-1]['fy']
+                assets_previous = posts['facts']['us-gaap']['AssetsCurrent']['units']['USD'];
+                l = 1
+                while (assets_previous[len(assets_previous) - l]['fy'] == current_year):
+                    l += 1
+                assets_previous = assets_previous[len(assets_previous) - l]['val']
+
+                try:
+                    revenues_current = posts['facts']['dei']['SalesRevenueNet']['units']['shares']; revenues_current = revenues_current[len(revenues_current) - 1]['val']
+                    revenues_previous = posts['facts']['us-gaap']['SalesRevenueNet']['units']['USD'];
+                    l = 1
+                    while (revenues_previous[len(revenues_previous) - l]['fy'] == current_year):
+                        l += 1
+                    revenues_previous = revenues_previous[len(revenues_previous) - l]['val']
+                except:
+                    revenues_current = posts['facts']['dei']['Revenues']['units']['shares']; revenues_current = revenues_current[len(revenues_current) - 1]['val']
+                    revenues_previous = posts['facts']['us-gaap']['Revenues']['units']['USD'];
+                    l = 1
+                    while (revenues_previous[len(revenues_previous) - l]['fy'] == current_year):
+                        l += 1
+                    revenues_previous = revenues_previous[len(revenues_previous) - l]['val']
+
+                asset_turnover_current = revenues_current / assets_current
+                asset_turnover_previous = revenues_previous / assets_previous
+                successful_tests += 1
+                if asset_turnover_current > asset_turnover_previous:
+                    points += 1
+            except:
+                pass
+
+            # Combining results
+            if successful_tests > 0:
+                return round((points / successful_tests) * 9, 2)
+            else:
+                return None
+    else:
+        return None
+
 # Function of preparing information for future display on the Text Box
 def get_displayable_data(cik, company_name):
     if cik is not None:
         posts = get_posts(cik)
 
         if posts is None:
-            return [company_name, 'No Information', 'No Information']
+            return [company_name, 'No Information', 'No Information', 'Impossible to compute', '⚠️ ']
         else:
             company_industry = get_industry_from_cik(cik)['industry']
             try:
@@ -18,11 +221,21 @@ def get_displayable_data(cik, company_name):
                 # sic_info = get_sic_from_cik(company_number) # - Only for cases outside EDGAR database and has a limited amount of calls
                 company_value_of_assets = 'No Information'
 
-            if posts and company_industry is not None:
+            # Getting Z_score for this company
+            F_score = conduct_piotroski_scoring(cik)
+            if (posts and company_industry and F_score) is not None:
                 print(f'Name of company - {company_name}\nIndustry - {company_industry}\nValue of assets in USD - {company_value_of_assets}')
-                return [company_name, company_industry, company_value_of_assets]
+                if F_score <= 9 and F_score >= 8:
+                    sign = '🟢 '
+                elif F_score >= 6:
+                    sign = '🟡 '
+                elif F_score >= 4:
+                    sign = '🟠 '
+                else:
+                    sign = '🔴 '
+                return [company_name, company_industry, company_value_of_assets, F_score, sign]
             else:
-                return [company_name, 'No Information', 'No Information']
+                return [company_name, 'No Information', 'No Information', 'Impossible to compute', '⚠️ ']
     else:
         return None
 
