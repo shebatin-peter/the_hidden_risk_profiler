@@ -2,7 +2,36 @@ import json
 import requests
 from bs4 import BeautifulSoup
 
-# Function of conducting an Altman Z-score for the chosen company
+# Function of conducting a Synergy Scoring test for the chosen company given Acquirer info
+def conduct_synergy_scoring(sic_chosen, company_ta, total_assets_Ac, sic_Ac, F_score):
+    final_synergy = 0
+    total_assets_Ac = int(total_assets_Ac)
+
+    # 1. Industry Match - comparing SICs : 40 points out 100
+    if (sic_chosen and sic_Ac) is None:
+        pass # Nothing
+    elif sic_chosen == sic_Ac:
+        final_synergy += 40 # Exact industry
+    elif sic_chosen[:2] == sic_Ac[:2]:
+        final_synergy += 25 # Same broad group industry
+
+    # 2. Asset Size Compatibility - comparing target and Acquirer's assets units : 30 points out 100
+    if total_assets_Ac <= 0 or company_ta <= 0:
+        pass # Nothing
+    elif 0.5 <= company_ta / total_assets_Ac <= 2:
+        final_synergy += 30 # Close size
+    elif 0.25 <= company_ta / total_assets_Ac < 0.5 or 2 < company_ta / total_assets_Ac <= 4:
+        final_synergy += 15 # Significant difference
+
+    # 3. F-score Performance - consider the result of previously conducted F-score test on target company : 30 points out 100
+    if F_score is None:
+        pass # Nothing
+    else:
+        final_synergy += int((F_score / 9) * 30) # Scaling the result to the 30 points size
+
+    return final_synergy
+
+# Function of conducting a Piotroski F-score for the chosen company
 def conduct_piotroski_scoring(cik):
     if cik is not None:
         posts = get_posts(cik)
@@ -206,41 +235,54 @@ def conduct_piotroski_scoring(cik):
         return None
 
 # Function of preparing information for future display on the Text Box
-def get_displayable_data(cik, company_name):
+def get_displayable_data(cik, company_name, total_assets_Ac, sic_Ac):
     if cik is not None:
         posts = get_posts(cik)
 
         if posts is None:
-            return [company_name, 'No Information', 'No Information', 'Impossible to compute', '⚠️ ']
+            return [company_name, 'No Information', 'No Information', 'Impossible to compute', '⚠️ ', 'No Synergy', '⚠️ ']
         else:
-            company_industry = get_industry_from_cik(cik)['industry']
+            company_info_deep = get_industry_from_cik(cik)
+            company_industry = company_info_deep['industry']
             try:
                 company_value_of_assets = str(posts['facts']['us-gaap']['Assets']['units']['USD'][len(posts['facts']['us-gaap']['Assets']['units']['USD']) - 1]['val'])
-                company_value_of_assets = f"{int(company_value_of_assets):,}"
             except:
                 # sic_info = get_sic_from_cik(company_number) # - Only for cases outside EDGAR database and has a limited amount of calls
-                company_value_of_assets = 'No Information'
+                company_value_of_assets = None
 
             # Getting Z_score for this company
             F_score = conduct_piotroski_scoring(cik)
-            if (posts and company_industry and F_score) is not None:
+            if (posts and company_industry and F_score and company_value_of_assets) is not None:
                 print(f'Name of company - {company_name}\nIndustry - {company_industry}\nValue of assets in USD - {company_value_of_assets}')
-                if F_score <= 9 and F_score >= 8:
-                    sign = '🟢 '
+                synergy_score = conduct_synergy_scoring(company_info_deep['sic'], int(company_value_of_assets), total_assets_Ac, sic_Ac, F_score)
+                company_value_of_assets = f"{int(company_value_of_assets):,}"
+                if 9 >= F_score >= 8:
+                    sign_f = '🟢 '
                 elif F_score >= 6:
-                    sign = '🟡 '
+                    sign_f = '🟡 '
                 elif F_score >= 4:
-                    sign = '🟠 '
+                    sign_f = '🟠 '
                 else:
-                    sign = '🔴 '
-                return [company_name, company_industry, company_value_of_assets, F_score, sign]
+                    sign_f = '🔴 '
+
+                if 100 >= synergy_score >= 80:
+                    sign_s = '        🟢 '
+                elif synergy_score >= 50:
+                    sign_s = '        🟡 '
+                elif synergy_score >= 20:
+                    sign_s = '        🟠 '
+                else:
+                    sign_s = '        🔴 '
+                return [company_name, company_industry, company_value_of_assets, F_score, sign_f, str(synergy_score) + '/100', sign_s]
+            elif (posts and company_industry) is not None:
+                return [company_name, company_industry, 'No Information', 'Impossible to compute', '⚠️ ', 'No Synergy','⚠️ ']
             else:
-                return [company_name, 'No Information', 'No Information', 'Impossible to compute', '⚠️ ']
+                return [company_name, 'No Information', 'No Information', 'Impossible to compute', '⚠️ ', 'No Synergy', '⚠️ ']
     else:
         return None
 
 # Function of getting information about the company (industry, SIC code)
-def get_industry_from_cik(cik, industry_filter = ''):
+def get_industry_from_cik(cik):
     cik_number = cik
     url = f"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK={cik_number}&owner=exclude&count=40"
     headers = {
@@ -255,10 +297,7 @@ def get_industry_from_cik(cik, industry_filter = ''):
         if "SIC:" in info_block:
             sic_code = info_block.split("SIC:")[1].split("-")[0].strip()
             sic_name = info_block.split("-")[1].strip().split("State location")[0].split('\n')[0]
-            if sic_name == industry_filter:
-                return {"cik": cik_number, "sic": sic_code, "industry": sic_name}
-            else:
-                return {"cik": cik_number, "sic": sic_code, "industry": sic_name}
+            return {"cik": cik_number, "sic": sic_code, "industry": sic_name}
         else:
             return {"cik": cik_number, "sic": None, "industry": None}
 

@@ -23,7 +23,9 @@ engine.rootContext().setContextProperty("sicModel", sic_data)
 def on_company_selected(company):
     print("Algorithm triggered for:", company["name"])
     cik = company['cik']
-    displayable_data = get_displayable_data(cik, company['name'])
+    total_assets_Ac = receiver.get_acquirer_assets()
+    sic_Ac = receiver.get_acquirer_sic_code()
+    displayable_data = get_displayable_data(cik, company['name'], total_assets_Ac, sic_Ac)
     if displayable_data is None:
         print('CIK is None - Does not work :(')
     else:

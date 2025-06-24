@@ -16,12 +16,12 @@ Rectangle {
 
     color: "#EAEAEA"
 
-    property string companyName: "-"
-    property string companyIndustry: "-"
-    property string companyAssets: "-"
-    property string companyFScore: "-"
+    property string companyName: ""
+    property string companyIndustry: ""
+    property string companyAssets: ""
+    property string companyFScore: ""
     property string companyFScoreSign: ""
-    property string companySynergy: "-"
+    property string companySynergy: ""
     property string companySynergySign: ""
     property var cikModel: []
 
@@ -50,6 +50,8 @@ Rectangle {
             companyAssets = displayable_data[2]
             companyFScore = displayable_data[3]
             companyFScoreSign = displayable_data[4]
+            companySynergy = displayable_data[5]
+            companySynergySign = displayable_data[6]
         }
 
         function onFilterChanged(filtered) {
@@ -105,9 +107,9 @@ Rectangle {
     }
 
     Rectangle {
-        width: 400
+        width: 480
         height: 125
-        x: 675
+        x: 650
         y: 115
         color: "#f9f9f9"
         radius: 6
@@ -135,7 +137,7 @@ Rectangle {
             }
 
             Text {
-                text: companyAssets.length > 0 ? companyFScoreSign + "F-score: " + companyFScore + "                    " + companySynergySign + "Synergy Scoring: " + companySynergy: "F-score: -                  Synergy Scoring: -"
+                text: companyFScore.length > 0 ? companyFScoreSign + "F-score: " + companyFScore + "        " + companySynergySign + "Synergy Scoring: " + companySynergy: "F-score: -              Synergy Scoring: -"
                 font.pointSize: 14
             }
         }
